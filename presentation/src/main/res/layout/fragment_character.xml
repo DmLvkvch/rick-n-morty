@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.domain.entities.character.CharacterGender" />
+
+        <import type="com.example.domain.entities.character.CharacterStatus" />
+
+        <import type="com.example.domain.entities.character.CharacterOrigin" />
+
+        <import type="com.example.domain.entities.character.CharacterLocation" />
+
+        <variable
+            name="character"
+            type="com.example.domain.entities.character.Character" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/layout_back_navigation_header"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/character_details_fragment_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardElevation="8dp"
+                tools:context=".ui.character.CharacterFragment">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/character_image"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="16dp"
+                        app:url="@{character.image}" />
+
+                    <TextView
+                        android:id="@+id/character_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_toEndOf="@id/character_image"
+                        android:text="@{character.name}" />
+
+
+                    <TextView
+                        android:id="@+id/character_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/character_name"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/character_image"
+                        android:text="@{character.gender}" />
+
+                    <TextView
+                        android:id="@+id/character_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/character_gender"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/character_image"
+                        android:text="@{character.status}" />
+
+                    <TextView
+                        android:id="@+id/character_species"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/character_status"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/character_image"
+                        android:text="@{character.species}" />
+
+                    <TextView
+                        android:id="@+id/character_created"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/character_species"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/character_image"
+                        android:text="@{character.created}" />
+
+                    <TextView
+                        android:id="@+id/character_origin"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/character_image"
+                        android:layout_marginTop="10dp"
+                        android:text="@{character.origin}"
+                        android:textSize="20sp"
+                        app:origin="@{character.origin}" />
+
+                    <TextView
+                        android:id="@+id/character_location"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/character_origin"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:text="@{character.location}"
+                        android:textSize="20sp"
+                        app:location="@{character.location}" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/character_details_episode_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

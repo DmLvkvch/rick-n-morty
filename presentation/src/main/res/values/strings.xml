@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RickNMortyApp</string>
+    <string name="title_characters">Персонажи</string>
+    <string name="title_locations">Локации</string>
+    <string name="title_episodes">Эпизоды</string>
+    <string name="search_hint">search…</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="character_name">name</string>
+    <string name="location_filter_hint_name">name</string>
+    <string name="location_filter_hint_type">type</string>
+    <string name="location_filter_hint_dimension">dimension</string>
+    <string name="location_list_tag">LocationListFragment</string>
+    <string name="character_filter_hint_gender">gender</string>
+    <string name="character_filter_hint_type">type</string>
+    <string name="character_filter_hint_species">species</string>
+    <string name="character_filter_hint_status">status</string>
+    <string name="episode_filter_hint_status">status</string>
+    <string name="character_list_fragment_tag">CharacterListFragment</string>
+    <string name="episode_list_fragment_tag">EpisodeListFragment</string>
+    <string name="dialog_fragment_tag">editFilter</string>
+</resources>

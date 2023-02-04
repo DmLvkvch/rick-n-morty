@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@+id/navigation_character">
+
+    <fragment
+        android:id="@+id/navigation_character"
+        android:name="com.example.ricknmortyapp.ui.character.CharacterNavigationFragment" />
+
+    <fragment
+        android:id="@+id/navigation_location"
+        android:name="com.example.ricknmortyapp.ui.location.LocationNavigationFragment" />
+    <fragment
+        android:id="@+id/navigation_episode"
+        android:name="com.example.ricknmortyapp.ui.episode.EpisodeNavigationFragment" />
+</navigation>

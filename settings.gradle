@@ -1,0 +1,4 @@
+rootProject.name = "RickNMortyApp"
+include ':presentation'
+include ':domain'
+include ':data'
