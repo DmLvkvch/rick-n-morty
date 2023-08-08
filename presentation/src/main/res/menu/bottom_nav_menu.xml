@@ -16,4 +16,9 @@
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/title_episodes" />
 
+    <item
+        android:id="@+id/navigation_opengl"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/opengl" />
+
 </menu>

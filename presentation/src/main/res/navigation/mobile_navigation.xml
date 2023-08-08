@@ -13,4 +13,8 @@
     <fragment
         android:id="@+id/navigation_episode"
         android:name="com.example.ricknmortyapp.ui.episode.EpisodeNavigationFragment" />
+
+    <fragment
+        android:id="@+id/navigation_opengl"
+        android:name="com.example.ricknmortyapp.render.OpenGLNavigationFragment" />
 </navigation>

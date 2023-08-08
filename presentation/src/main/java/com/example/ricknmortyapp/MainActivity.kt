@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
                 setOf(
                     R.id.navigation_character,
                     R.id.navigation_location,
-                    R.id.navigation_episode
+                    R.id.navigation_episode,
+                    R.id.navigation_opengl
                 )
             )
         setupActionBarWithNavController(navController, appBarConfiguration)
